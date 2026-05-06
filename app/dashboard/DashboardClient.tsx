@@ -23,7 +23,8 @@ export default function DashboardClient() {
     searchParams.get('district') ?? 'Colombo'
   );
   const [selectedHorizon, setSelectedHorizon] = useState<number>(4);
-  const [selectedDate, setSelectedDate] = useState<string>('All');
+  const [startDate, setStartDate] = useState<string>('2014-06-21');
+  const [endDate, setEndDate] = useState<string>('2025-05-10');
 
   useEffect(() => {
     loadForecastData('/data/dengue-results-full.csv').then(setData);
@@ -43,10 +44,14 @@ export default function DashboardClient() {
     return data.filter((row) => {
       const districtMatch = selectedDistrict === 'All' || row.district === selectedDistrict;
       const horizonMatch = selectedHorizon === 0 || row.horizon === selectedHorizon;
-      const dateMatch = selectedDate === 'All' || row.date === selectedDate;
+      const rowTime = new Date(row.date).getTime();
+      const startTime = new Date(startDate).getTime();
+      const endTime = new Date(endDate).getTime();
+
+      const dateMatch = rowTime >= startTime && rowTime <= endTime;
       return districtMatch && horizonMatch && dateMatch;
     });
-  }, [data, selectedDistrict, selectedHorizon, selectedDate]);
+  }, [data, selectedDistrict, selectedHorizon, startDate, endDate]);
 
   const districtFilteredData = useMemo(() => {
     return data.filter((row) => selectedDistrict === 'All' || row.district === selectedDistrict);
@@ -62,13 +67,14 @@ export default function DashboardClient() {
       <FilterPanel
         districts={districts}
         horizons={horizons}
-        dateOptions={dateOptions}
         selectedDistrict={selectedDistrict}
         selectedHorizon={selectedHorizon}
-        selectedDate={selectedDate}
+        startDate={startDate}
+        endDate={endDate}
+        setStartDate={setStartDate}
+        setEndDate={setEndDate}
         setSelectedDistrict={setSelectedDistrict}
         setSelectedHorizon={setSelectedHorizon}
-        setSelectedDate={setSelectedDate}
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-1 gap-6">

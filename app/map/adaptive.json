@@ -1,0 +1,177 @@
+{
+    "Ampara": {
+        "Galle": 0.7776,
+        "Kandy": 0.2138,
+        "Ratnapura": 0.0053,
+        "Puttalam": 0.0017,
+        "Batticaloa": 0.0008
+    },
+    "Anuradhapura": {
+        "NuwaraEliya": 0.3926,
+        "Kegalle": 0.195,
+        "Polonnaruwa": 0.1298,
+        "Matale": 0.1029,
+        "Kurunegala": 0.013
+    },
+    "Badulla": {
+        "Kurunegala": 0.2592,
+        "Kandy": 0.2447,
+        "Mullaitivu": 0.0884,
+        "Anuradhapura": 0.0354,
+        "Hambantota": 0.0116
+    },
+    "Batticaloa": {
+        "NuwaraEliya": 0.923,
+        "Kegalle": 0.0677,
+        "Matale": 0.0015,
+        "Polonnaruwa": 0.0009,
+        "Ratnapura": 0.0006
+    },
+    "Colombo": {
+        "Puttalam": 0.3044,
+        "Kurunegala": 0.2534,
+        "Trincomalee": 0.1223,
+        "Kegalle": 0.0674,
+        "Gampaha": 0.0568
+    },
+    "Galle": {
+        "Trincomalee": 0.7451,
+        "Batticaloa": 0.167,
+        "Colombo": 0.0498,
+        "Ratnapura": 0.0299,
+        "Badulla": 0.0023
+    },
+    "Gampaha": {
+        "Jaffna": 0.9774,
+        "Kegalle": 0.0072,
+        "Kilinochchi": 0.0046,
+        "Hambantota": 0.0035,
+        "NuwaraEliya": 0.0018
+    },
+    "Hambantota": {
+        "Kilinochchi": 0.9012,
+        "NuwaraEliya": 0.0416,
+        "Kandy": 0.0207,
+        "Galle": 0.0112,
+        "Kurunegala": 0.0079
+    },
+    "Jaffna": {
+        "Kurunegala": 0.4957,
+        "Matale": 0.1301,
+        "Polonnaruwa": 0.0557,
+        "Ratnapura": 0.0534,
+        "Mannar": 0.0381
+    },
+    "Kalutara": {
+        "Gampaha": 0.4404,
+        "Jaffna": 0.066,
+        "Kegalle": 0.0646,
+        "Anuradhapura": 0.0473,
+        "Polonnaruwa": 0.0408
+    },
+    "Kandy": {
+        "Kilinochchi": 0.5316,
+        "Ampara": 0.1705,
+        "Puttalam": 0.0603,
+        "Jaffna": 0.0224,
+        "Badulla": 0.0125
+    },
+    "Kegalle": {
+        "Polonnaruwa": 0.3616,
+        "Gampaha": 0.2495,
+        "Anuradhapura": 0.0919,
+        "Matale": 0.0694,
+        "Moneragala": 0.0522
+    },
+    "Kilinochchi": {
+        "Galle": 0.6251,
+        "NuwaraEliya": 0.1801,
+        "Jaffna": 0.07,
+        "Kandy": 0.0389,
+        "Kalutara": 0.029
+    },
+    "Kurunegala": {
+        "Polonnaruwa": 0.3014,
+        "NuwaraEliya": 0.2229,
+        "Gampaha": 0.1239,
+        "Matale": 0.0996,
+        "Ampara": 0.0332
+    },
+    "Mannar": {
+        "Trincomalee": 0.5374,
+        "Ampara": 0.0823,
+        "Moneragala": 0.0778,
+        "Badulla": 0.0612,
+        "Puttalam": 0.0568
+    },
+    "Matale": {
+        "NuwaraEliya": 0.5476,
+        "Vavuniya": 0.1887,
+        "Jaffna": 0.0474,
+        "Badulla": 0.0299,
+        "Kurunegala": 0.026
+    },
+    "Matara": {
+        "Kilinochchi": 0.6176,
+        "Mullaitivu": 0.0878,
+        "Jaffna": 0.0709,
+        "Kurunegala": 0.0437,
+        "Badulla": 0.028
+    },
+    "Moneragala": {
+        "Trincomalee": 0.3857,
+        "Colombo": 0.2629,
+        "Mannar": 0.0902,
+        "Batticaloa": 0.0857,
+        "Hambantota": 0.0412
+    },
+    "Mullaitivu": {
+        "Kalutara": 0.3742,
+        "Trincomalee": 0.3699,
+        "Colombo": 0.0457,
+        "Batticaloa": 0.04,
+        "Ratnapura": 0.0356
+    },
+    "NuwaraEliya": {
+        "Kilinochchi": 0.6684,
+        "Kurunegala": 0.1639,
+        "Matale": 0.0196,
+        "Kandy": 0.0096,
+        "Colombo": 0.0082
+    },
+    "Polonnaruwa": {
+        "Kegalle": 0.7405,
+        "Matale": 0.0482,
+        "NuwaraEliya": 0.0358,
+        "Anuradhapura": 0.0124,
+        "Jaffna": 0.0079
+    },
+    "Puttalam": {
+        "Kilinochchi": 0.7834,
+        "Kurunegala": 0.1862,
+        "Moneragala": 0.0067,
+        "Badulla": 0.0053,
+        "Kandy": 0.0042
+    },
+    "Ratnapura": {
+        "Jaffna": 0.9698,
+        "Hambantota": 0.0107,
+        "Mullaitivu": 0.007,
+        "Gampaha": 0.0038,
+        "Kilinochchi": 0.0024
+    },
+    "Trincomalee": {
+        "NuwaraEliya": 0.7489,
+        "Gampaha": 0.0782,
+        "Jaffna": 0.0505,
+        "Polonnaruwa": 0.0151,
+        "Kegalle": 0.012
+    },
+    "Vavuniya": {
+        "Jaffna": 0.3347,
+        "Kegalle": 0.0791,
+        "Galle": 0.0678,
+        "Kandy": 0.0556,
+        "Kilinochchi": 0.0482
+    }
+}
