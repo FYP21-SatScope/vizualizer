@@ -25,7 +25,7 @@ export default function DashboardPage() {
   const [selectedDate, setSelectedDate] = useState<string>('All');
 
   useEffect(() => {
-    loadForecastData('/data/dengue-results.csv').then(setData);
+    loadForecastData('/data/dengue-results-full.csv').then(setData);
   }, []);
 
   const dateOptions = useMemo(() => {

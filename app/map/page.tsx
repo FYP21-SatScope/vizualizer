@@ -18,7 +18,7 @@ export default function MapPage() {
   };
 
   useEffect(() => {
-    loadForecastData('/data/dengue-results.csv').then(setData);
+    loadForecastData('/data/dengue-results-full.csv').then(setData);
     fetch('/maps/sri-lanka-districts.geojson')
       .then((res) => res.json())
       .then(setGeoData);
