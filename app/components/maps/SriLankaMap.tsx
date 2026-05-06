@@ -11,9 +11,11 @@ import 'leaflet/dist/leaflet.css';
 export default function SriLankaForecastMap({
   geoData,
   districtMetrics,
+  onDistrictClick,
 }: {
   geoData: any;
   districtMetrics: Record<string, number>;
+  onDistrictClick?: (district: string) => void;
 }) {
   // console.log("districtMetrics:", districtMetrics);
   // console.log("geoData:", geoData);
@@ -63,14 +65,13 @@ export default function SriLankaForecastMap({
 
     layer.on({
       mouseover: (e: any) => {
-        e.target.setStyle({
-          fillColor: '#2563eb',
-          fillOpacity: 1,
-        });
+        e.target.setStyle({ fillColor: '#2563eb', fillOpacity: 1 });
       },
-
       mouseout: (e: any) => {
         e.target.setStyle(style(feature));
+      },
+      click: () => { 
+        onDistrictClick?.(district);
       },
     });
   };
