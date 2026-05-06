@@ -19,9 +19,9 @@ export default function DashboardPage() {
 
   const [data, setData] = useState<ForecastRow[]>([]);
   const [selectedDistrict, setSelectedDistrict] = useState<string>(
-    searchParams.get('district') ?? 'All'
+    searchParams.get('district') ?? 'Colombo'
   );
-  const [selectedHorizon, setSelectedHorizon] = useState<number>(0);
+  const [selectedHorizon, setSelectedHorizon] = useState<number>(4);
   const [selectedDate, setSelectedDate] = useState<string>('All');
 
   useEffect(() => {

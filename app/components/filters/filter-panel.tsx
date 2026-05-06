@@ -44,7 +44,7 @@ export default function FilterPanel({
         <option value="0">All Horizons</option>
         {horizons.map((horizon) => (
           <option key={horizon} value={horizon.toString()}>
-            Horizon {horizon}
+            {horizon} Week{horizon > 1 ? 's' : ''}
           </option>
         ))}
       </select>
