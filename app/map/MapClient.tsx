@@ -15,7 +15,7 @@ export default function MapClient() {
   const [geoData, setGeoData] = useState<any>(null);
 
   const handleDistrictClick = (district: string) => {
-    router.push(`/dashboard?district=${district}`);
+    router.push(`/dengue-dashboard?district=${district}`);
   };
 
   useEffect(() => {

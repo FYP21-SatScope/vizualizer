@@ -7,7 +7,8 @@ export default function Navbar() {
 
   const tabs = [
     { label: 'Map', href: '/map' },
-    { label: 'Dashboard', href: '/dashboard' },
+    { label: 'Dengue Dashboard', href: '/dengue-dashboard' },
+    { label: 'Chikungunya Dashboard', href: '/chikungunya-dashboard' },
   ];
 
   return (

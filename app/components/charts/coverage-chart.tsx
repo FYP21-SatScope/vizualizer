@@ -14,8 +14,9 @@ export default function CoverageChart({
     <div className="w-full h-[400px]">
       <ResponsiveContainer>
         <BarChart data={data}>
-          <XAxis dataKey="horizon" />
-          <YAxis />
+          <XAxis dataKey="horizon" 
+          label={{ value: 'Forecast Horizon', position: 'insideBottom', offset: -5 }}/>
+          <YAxis label={{ value: 'Probability', angle: -90, position: 'insideLeft', offset: 10 }}/>
           <Tooltip />
 
           <Bar

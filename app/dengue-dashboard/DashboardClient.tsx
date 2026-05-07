@@ -23,22 +23,12 @@ export default function DashboardClient() {
     searchParams.get('district') ?? 'Colombo'
   );
   const [selectedHorizon, setSelectedHorizon] = useState<number>(4);
-  const [startDate, setStartDate] = useState<string>('2014-06-21');
+  const [startDate, setStartDate] = useState<string>('2020-01-01');
   const [endDate, setEndDate] = useState<string>('2025-05-10');
 
   useEffect(() => {
     loadForecastData('/data/dengue-results-full.csv').then(setData);
   }, []);
-
-  const dateOptions = useMemo(() => {
-    const uniqueDates = Array.from(new Set(data.map((row) => row.date)));
-    return uniqueDates.sort((a, b) => {
-      const ta = new Date(a).getTime();
-      const tb = new Date(b).getTime();
-      if (Number.isNaN(ta) || Number.isNaN(tb)) return a.localeCompare(b);
-      return ta - tb;
-    });
-  }, [data]);
 
   const filteredData = useMemo(() => {
     return data.filter((row) => {
@@ -78,19 +68,19 @@ export default function DashboardClient() {
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-1 gap-6">
-        <DashboardCard title="Prediction Intervals">
+        <DashboardCard title="Forecasted vs Actual Case Counts with Prediction Intervals">
           <IntervalChart data={filteredData} />
         </DashboardCard>
-        <DashboardCard title="Forecast vs Actual">
+        <DashboardCard title="Forecasted Case Counts vs Actual Case Counts">
           <ForecastChart data={filteredData} />
         </DashboardCard>
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        <DashboardCard title="Horizon Error Curve">
+        <DashboardCard title="Mean Absolute Error(MAE) Across Forecast Horizons">
           <HorizonErrorChart data={maeData} />
         </DashboardCard>
-        <DashboardCard title="Coverage Probability">
+        <DashboardCard title="Prediction Interval Coverage Across Forecast Horizons">
           <CoverageChart data={coverageData} />
         </DashboardCard>
       </div>

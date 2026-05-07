@@ -25,10 +25,20 @@ export default function ForecastChart({
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
 
-          <XAxis dataKey="date" />
-          <YAxis />
+          <XAxis
+            dataKey="date"
+            interval={Math.max(0, Math.ceil(data.length / 10) - 1)}
+            label={{ value: 'Time', position: 'insideBottom', offset: -5 }}
+          />
+          <YAxis
+            label={{ value: 'Cases', angle: -90, position: 'insideLeft', offset: 10 }}
+          />
           <Tooltip />
-          <Legend />
+          <Legend
+            layout="vertical"
+            verticalAlign="top"
+            align="right"
+          />
 
           <Line
             type="monotone"

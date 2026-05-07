@@ -17,17 +17,21 @@ interface Props {
   data: ForecastRow[];
 }
 
-export default function IntervalChart({
-  data,
-}: Props) {
+export default function IntervalChart({ data }: Props) {
   return (
     <div className="w-full h-[500px]">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
 
-          <XAxis dataKey="date" />
-          <YAxis />
+          <XAxis
+            dataKey="date"
+            interval={Math.max(0, Math.ceil(data.length / 10) - 1)}
+            label={{ value: 'Time', position: 'insideBottom', offset: -5 }}
+          />
+          <YAxis
+            label={{ value: 'Cases', angle: -90, position: 'insideLeft', offset: 10 }}
+          />
 
           <Tooltip
             formatter={(value: any, name) => {
@@ -35,26 +39,32 @@ export default function IntervalChart({
             }}
           />
 
-          <Legend />
+          <Legend
+            layout="vertical"
+            verticalAlign="top"
+            align="right"
+          />
 
           {/* Upper bound */}
           <Area
             type="monotone"
             dataKey="upper"
-            stroke="none"
+            stroke="#6366f1"
             fill="#4ade80"
             fillOpacity={0.35}
             name="Upper Bound"
           />
 
-          {/* Lower bound cutout */}
+          {/* Lower bound — white fill to cut out, but green stroke for legend/tooltip */}
           <Area
             type="monotone"
             dataKey="lower"
-            stroke="none"
+            stroke="#f59e0b"
+            strokeWidth={1}
             fill="#ffffff"
             fillOpacity={1}
             name="Lower Bound"
+            color="#4ade80"
           />
 
           {/* Prediction line */}
